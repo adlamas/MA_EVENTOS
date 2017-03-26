@@ -1,0 +1,175 @@
+/* .navbar-fixed-top{background: blue;} Funciona. Modificarlo a través de las clases */
+/*.navbar-fixed-top{background: black; border: none;} */
+
+/*<img src="img/Fondo1.jpg" alt="uno">
+                <img src="img/Fondo2.jpg" alt="dos">
+                <img src="img/Fondo3.jpg" alt="tres">
+                <img src="img/Fondo4.jpg" alt="cuatro">
+                <img src="img/Fondo5.jpg" alt="cinco"> */
+
+body {width: 95%;}
+
+div.navbar-header a.navbar-brand:hover{
+    color: #fff;
+    letter-spacing: 1.5px;
+       
+    
+}
+div.navbar-header a.navbar-brand{
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.carousel-caption { //Texto dentro de las imágenes del slideshow
+    margin-top: -50px;
+}
+
+
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+
+/* estilos del navbar, cambio de color del background y padding */
+ul.nav li:hover {
+    
+ background: #255625;
+ padding-left: 15px;
+ padding-right: 15px;
+
+}
+
+.navbar-right li a:hover{
+    
+    background: #255625;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ul.nav li{
+ transition-property: background, padding-left, padding-right, font-weight;
+ transition-duration: 1s, 1s, 0.5s ;
+    
+}
+
+ li a {
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.contenedorTitulo{
+    color: white;
+    opacity: 0.85;
+    background-color: black;
+    font-weight: initial;
+    font-size: 2em;  
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: -30px;
+    
+}
+
+.contenedorTitulo{   
+   
+}
+
+.miniaturas{
+   
+    width: 100%;   
+    font-size: 1em;
+    text-align: left;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.tituloMiniatura{
+    
+    color: white;
+    font-size: 2em;
+    margin-bottom: 5px;
+    border-bottom: 3px solid  #999;
+    
+    font-weight: bold;
+}
+
+div.tituloMiniatura a{
+    color: white;
+}
+
+div.tituloMiniatura a:hover {
+    
+ color: #337ab7;
+ text-decoration: none;
+ 
+
+}
+
+div.tituloMiniatura a{
+ transition-property: all;
+ transition-duration: 0.5s;
+    
+}
+
+
+.textoMiniatura{
+    text-align: left;
+    color: #999;
+    
+}
+
+.contactenos{
+    border-top: 4px solid #999;
+    
+}
+
+.page {
+  padding: 50px 0; }
+  .page .align-left {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px; }
+  .page .align-right {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px; }
+  .page .entry-title {
+        color: #f4c545;
+    font-size: 36px;
+    font-size: 2.5714285714em;
+    list-style: 3px;
+    font-weight: 300;
+    text-transform: uppercase; }
+  .page p {
+    color: #d2d2d2;
+    font-size: 16px;
+    font-size: 1.1428571429em;
+    line-height: 2; }
+
+.separator {
+  border: none;
+  border-top: 1px solid #383838;
+  margin: 50px 0;
+  clear: both; }
+
+.sectiont-title {
+         color: #f4c545;
+    font-size: 26px;
+    font-size: 2.5714285714em;
+    list-style: 3px;
+    font-weight: 300;
+ 
+}
+.feature-title{
+    
+}
+
+.entry-title{
+    margin-top: -80px;
+    margin-bottom: 20px;
+}
+
+
