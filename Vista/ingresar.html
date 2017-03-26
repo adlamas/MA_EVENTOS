@@ -14,6 +14,25 @@ and open the template in the editor.
         <script src="../js/bootstrap.js" type="text/javascript"></script>               
         <link rel="stylesheet" href="../css/estilos.css">    
         <script src="../js/reproductor.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $('#input_registro').hide();
+                
+                $('#enviar').hover(function(){
+                    $(this).css('background-color', 'blue');
+                }, function(){
+                    $(this).css('background-color', '#ff1701');
+                });
+                
+                
+                
+                $('#registro').click(function(){
+                   $('#input_registro').slideDown(); 
+                });
+            });
+            
+        </script>
          
     </head>
     <body style="background-color: #111" class="container-fluid">
@@ -69,9 +88,14 @@ and open the template in the editor.
             <h4 style="font-weight: bold; color: whitesmoke">Password</h4>
             <input class="form-control center-block" style="background-color: whitesmoke; color: #777;width: 300px; height: 40px; font-weight: bold" type="password" name="login">
 
-            <input class="form-control center-block" style="background-color: #ff1701;margin-top: 30px;
+            <input class="form-control center-block" id="enviar" style="background-color: #ff1701;margin-top: 30px;
                    color: #777;width: 250px; height: 40px;color: whitesmoke; font-size: 20px; font-weight: bold" type="submit" value="ENVIAR">
         
+            <a href="#"><p id="registro" style="margin-top: 20px;">¿Aún no tenés una cuenta?</p></a>
+            <input class="form-control center-block" id="input_registro" style="background-color: #2098d1;margin-top: 10px;
+                   color: #777;width: 150px; height: 35px;color: black; font-size: 15px; font-weight: bold" type="submit" value="Resgistrate">
+        
+            
         </form>
     </section>
         
