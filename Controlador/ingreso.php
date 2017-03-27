@@ -12,9 +12,9 @@ and open the template in the editor.
     <body>
         <?php
         
-        $nombre = $_POST[addslashes('nombre')];
-        $apellido = $_POST['apellido'];
-        $password = $_POST['password'];
+        $nombre = htmlentities(addslashes($_POST['nombre']));
+        $apellido = htmlentities(addslashes($_POST['apellido']));
+        $password = htmlentities(addslashes($_POST['password']));
        
         //echo $nombre;
         
@@ -34,8 +34,12 @@ and open the template in the editor.
 //                   '<div style="color: red"> Apellido: ' . $resultado[2] . '</div>' . '<br>';
 //       }
      
+        
         if($resultados->fetch(PDO::FETCH_ASSOC)){
-            echo "Bienvenido/a señor/a " . $nombre; 
+            //echo "Bienvenido/a señor/a " . $nombre; 
+            session_start();
+            $_SESSION['nombre'] = $nombre;
+            header('Location: ../Vista/index.php');
         }else
             echo "Ud. no se registró";
         ?>

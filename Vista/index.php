@@ -26,8 +26,20 @@ Linkeamos de animate.css y de hover.css los efectos
     <link rel="stylesheet" href="../css/estilo-grid.css"> 
     <link rel="stylesheet" href="../css/font-awesome.css">
     <script src="../js/jquery.js"></script>   
-    <script src="../js/reproductor.js"></script>  
+    <script src="../js/reproductor.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('#servicios').click(function(){
+               $(this).css('color', 'red').css('font-weight', 'bold');
+               
+           });
+           
+           
+        });
     
+    </script>
+    
+    <?php session_start(); ?>
     
      <style>
         
@@ -38,9 +50,9 @@ Linkeamos de animate.css y de hover.css los efectos
   </head>
   <body class="container-fluid">    
       
-      <div class="container">
+    <div class="container">
           
-          <header>
+    <header>
               <nav class="navbar navbar-default navbar-fixed-top" style="top: 0px; background: #d58512;">
                   <a href="#">
                       <span class=" fa fa-play " style="margin-left: 10px;" id="iniciar"></span>
@@ -55,9 +67,9 @@ Linkeamos de animate.css y de hover.css los efectos
                   <span class=" fa fa-forward" style="margin-left: 2px;" id="anterior"></span>
                   </a>
               </nav>
-          </header>
+    </header>
           
-      <header>
+    <header id="segundo_header">
           <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" style="top: 22px;">
               <!-- En HTML5 podemos usar el atributo role para incluir esa información adicional 
               gracias al módulo WAI-ARIA. ATRIBUTO ROLE IMPORTANTE !-->
@@ -79,11 +91,17 @@ Linkeamos de animate.css y de hover.css los efectos
                  
                   <div class="collapse navbar-collapse" id="navbar-1">
                       <ul class="nav navbar-nav navbar-right">
-                          <li ><a href="index.html" class="container-fluid animated bounceIn">Home</a></li>
-                          <li><a href="#" class="animated bounceIn">Services</a></li>
-                          <li><a href="Conocenos.html" class="animated bounceIn">About us</a></li>
-                          <li><a href="Contactenos.html" class="animated bounceIn">Contact</a></li>
-                          <li><a href="ingresar.html" class="animated bounceIn">Ingresar</a></li>
+                          <li ><a href="index.php" class="container-fluid animated bounceIn">Home</a></li>
+                          <li><a href="#" id="servicios" class="animated bounceIn">Services</a></li>
+                          <li><a href="conocenos.php" class="animated bounceIn">About us</a></li>
+                          <li><a href="contactenos.php" class="animated bounceIn">Contact</a></li>
+                          <?php
+                          if(isset($_SESSION['nombre'])){
+                          echo '<li><a href="ingresar.php" id="nombre_usuario" class="animated bounceIn">'.
+                                  $_SESSION['nombre'].'</a></li>';
+                          }else
+                              echo '<li><a href="ingresar.php" class="animated bounceIn">Ingresar</a></li>';                        
+                          ?>
                       </ul>
                       
                   </div>
@@ -91,7 +109,8 @@ Linkeamos de animate.css y de hover.css los efectos
               </div>
           </nav>      
           
-      </header>       
+    </header>
+          
      </div> 
       
       <header id="myCarousel" class="carousel slide container-fluid" style="margin-top: 20px; ">
